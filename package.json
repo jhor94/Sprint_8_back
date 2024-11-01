@@ -1,0 +1,23 @@
+{
+  "name": "sprint_8_back",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "servidor": "nodemon dist/index.js",
+    "tsc": "tsc --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "sequ": "^0.1.7",
+    "sequelize": "^6.37.5"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0"
+  }
+}

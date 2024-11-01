@@ -1,0 +1,34 @@
+import express, { Application, Request, Response } from "express";
+
+class Server {
+    private app: Application;
+    private port: string;
+
+    constructor() {
+        this.app = express();
+        this.port = process.env.PORT || '3001';
+        this.listen();
+        this.routes();
+
+    }
+
+    listen() {
+        this.app.listen(this.port, () => {
+            console.log(`Servidor rodando en el port ${this.port}`);
+
+        })
+    }
+
+    routes() {
+        this.app.get('/', (req: Request, res: Response) => {
+            res.json({
+                msg: "api working"
+            })
+        })
+        // ira la ruta
+        //this.app.use('/api/productos')
+    }
+}
+
+
+export default Server;
