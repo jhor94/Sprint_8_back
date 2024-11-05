@@ -15,10 +15,12 @@
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "mysql2": "^3.11.3",
+    "promise-mysql": "^5.2.0",
     "sequ": "^0.1.7",
     "sequelize": "^6.37.5"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0"
   }
 }

@@ -13,8 +13,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-const products_1 = __importDefault(require("../routes/products"));
-const connectiondb_1 = __importDefault(require("../db/connectiondb"));
+const cors_1 = __importDefault(require("cors"));
+const personas_router_1 = __importDefault(require("../routes/personas-router"));
+//import baseDatos from "../db/connectiondb";// kitar para conectar bd con squelize
+const database_1 = require("../db/database");
 class Server {
     constructor() {
         this.app = (0, express_1.default)();
@@ -22,7 +24,7 @@ class Server {
         this.listen();
         this.midlewares(); // siempre colocarlo antes de los routes
         this.routes();
-        this.basedatosConnect();
+        //this.basedatosConnect()
     }
     listen() {
         this.app.listen(this.port, () => {
@@ -36,23 +38,23 @@ class Server {
                 description: "api working"
             });
         });
-        // ira la ruta
-        this.app.use('/api/productos', products_1.default);
-    }
-    midlewares() {
-        this.app.use(express_1.default.json());
-    }
-    basedatosConnect() {
-        return __awaiter(this, void 0, void 0, function* () {
+        this.app.get('/api/personas', (req, res) => __awaiter(this, void 0, void 0, function* () {
             try {
-                yield connectiondb_1.default.authenticate();
-                console.log("base de datos conectada");
+                const connection = yield (0, database_1.getConnetion)();
+                const result = yield connection.query("SELECT * FROM persona");
+                res.json(result);
             }
             catch (error) {
-                console.log(error);
-                console.log("error en la base de datos");
+                console.error(error);
+                res.status(500).json({ message: 'Error en la base de datos' });
             }
-        });
+        }));
+        // ira la ruta
+        this.app.use('/api/personas', personas_router_1.default);
+    }
+    midlewares() {
+        this.app.use((0, cors_1.default)({ origin: 'http://localhost:4200' }));
+        this.app.use(express_1.default.json());
     }
 }
 exports.default = Server;
