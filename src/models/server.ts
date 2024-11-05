@@ -2,7 +2,8 @@ import express, { Application, Request, Response } from "express";
 import cors from "cors";
 import routePersonas from "../routes/personas-router";
 //import baseDatos from "../db/connectiondb";// kitar para conectar bd con squelize
-import {connection,getConnetion} from "../db/database"
+import sequelize from "../db/connectiondb"; // // kitar para conectar bd con squelize
+//import {connection,getConnetion} from "../db/database"
 
 class Server {
     private app: Application;
@@ -14,7 +15,7 @@ class Server {
         this.listen();
         this.midlewares(); // siempre colocarlo antes de los routes
         this.routes();
-        //this.basedatosConnect()
+        this.basedatosConnect()
 
     }
 
@@ -32,7 +33,7 @@ class Server {
                 description: "api working"
             })
         })
-        this.app.get('/api/personas', async(req: Request,res:Response)=>{
+       /* this.app.get('/api/personas', async(req: Request,res:Response)=>{
             try{
                 const connection = await getConnetion();
                 const result = await connection.query("SELECT * FROM persona");
@@ -41,7 +42,7 @@ class Server {
                     console.error(error);
                     res.status(500).json({message: 'Error en la base de datos'})
             }
-        });
+        });*/
         // ira la ruta
         this.app.use('/api/personas', routePersonas)
     }
@@ -54,10 +55,10 @@ class Server {
 
     
 
-   /* async basedatosConnect(){
+    async basedatosConnect(){
 
         try{
-        await baseDatos.authenticate()
+        await sequelize.authenticate()
         console.log("base de datos conectada")
         }catch(error){
             console.log("error")

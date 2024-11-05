@@ -1,10 +1,9 @@
 "use strict";
-/*import { Sequelize } from "sequelize";
-
-const sequelize = new Sequelize ("personas", "root", "", {
+Object.defineProperty(exports, "__esModule", { value: true });
+const sequelize_1 = require("sequelize");
+const sequelize = new sequelize_1.Sequelize("Personas", "root", "", {
     host: "localhost",
     dialect: "mysql",
     logging: false
-})
-
-export default sequelize;*/
+});
+exports.default = sequelize;

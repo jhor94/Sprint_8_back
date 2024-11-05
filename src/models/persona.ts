@@ -1,6 +1,7 @@
-/*import { DataTypes } from "sequelize";
+import { DataTypes } from "sequelize";
 import baseDatos from "../db/connectiondb"
-const Persona = baseDatos.define('personas', {
+import sequelize from "../db/connectiondb"
+const Persona = sequelize.define('Persona', {
 
     nombre: {
         type: DataTypes.STRING,
@@ -24,4 +25,5 @@ const Persona = baseDatos.define('personas', {
     createdAt: false,
     updatedAt: false
 });
-*/
+
+export default Persona

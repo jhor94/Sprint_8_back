@@ -5,7 +5,7 @@ import dotenv from 'dotenv'
 dotenv.config();
 
 // Crea una conexión a la base de datos
-const connection = mysql.createPool({
+/*const connection = mysql.createPool({
     host: process.env.HOST,
     database: process.env.DATABASE,
     user: process.env.SQL_USER,
@@ -16,4 +16,4 @@ const connection = mysql.createPool({
 // Función para ejecutar consultas
 const getConnetion = () => connection
 
-export { connection,getConnetion }
+export { connection,getConnetion }*/
