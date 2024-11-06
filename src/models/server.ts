@@ -2,8 +2,12 @@ import express, { Application, Request, Response } from "express";
 import cors from "cors";
 import routePersonas from "../routes/personas-router";
 import routerLocalizaciones from "../routes/localizaciones-router"
-//import baseDatos from "../db/connectiondb";// kitar para conectar bd con squelize
-import sequelize from "../db/connectiondb"; // // kitar para conectar bd con squelize
+import routerEventos from "../routes/eventos-router"
+import sequelize from "../db/connectiondb";
+
+
+
+//conexion con mysql2
 //import {connection,getConnetion} from "../db/database"
 
 class Server {
@@ -47,6 +51,7 @@ class Server {
         // ira la ruta
         this.app.use('/api/personas', routePersonas)
         this.app.use('/api/localizaciones', routerLocalizaciones)
+        this.app.use('/api/eventos', routerEventos)
     }
 
     midlewares(){

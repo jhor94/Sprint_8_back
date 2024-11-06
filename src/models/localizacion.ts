@@ -6,6 +6,10 @@ const Localizacion = sequelize.define('localizaciones',{
         type: DataTypes.STRING,
         allowNull: false
     },
+    descripcion: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
     latitud: {
         type: DataTypes.DECIMAL(10,8),
         allowNull: false
@@ -14,6 +18,10 @@ const Localizacion = sequelize.define('localizaciones',{
         type: DataTypes.DECIMAL(11,8),
         allowNull: false
     },
+    categoria: {
+        type: DataTypes.STRING,
+        allowNull: false
+    }
 },{
     createdAt: false,
     updatedAt:false

@@ -10,6 +10,10 @@ const Localizacion = connectiondb_1.default.define('localizaciones', {
         type: sequelize_1.DataTypes.STRING,
         allowNull: false
     },
+    descripcion: {
+        type: sequelize_1.DataTypes.STRING,
+        allowNull: false
+    },
     latitud: {
         type: sequelize_1.DataTypes.DECIMAL(10, 8),
         allowNull: false
@@ -18,6 +22,10 @@ const Localizacion = connectiondb_1.default.define('localizaciones', {
         type: sequelize_1.DataTypes.DECIMAL(11, 8),
         allowNull: false
     },
+    categoria: {
+        type: sequelize_1.DataTypes.STRING,
+        allowNull: false
+    }
 }, {
     createdAt: false,
     updatedAt: false

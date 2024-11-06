@@ -16,8 +16,9 @@ const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const personas_router_1 = __importDefault(require("../routes/personas-router"));
 const localizaciones_router_1 = __importDefault(require("../routes/localizaciones-router"));
-//import baseDatos from "../db/connectiondb";// kitar para conectar bd con squelize
-const connectiondb_1 = __importDefault(require("../db/connectiondb")); // // kitar para conectar bd con squelize
+const eventos_router_1 = __importDefault(require("../routes/eventos-router"));
+const connectiondb_1 = __importDefault(require("../db/connectiondb"));
+//conexion con mysql2
 //import {connection,getConnetion} from "../db/database"
 class Server {
     constructor() {
@@ -53,6 +54,7 @@ class Server {
         // ira la ruta
         this.app.use('/api/personas', personas_router_1.default);
         this.app.use('/api/localizaciones', localizaciones_router_1.default);
+        this.app.use('/api/eventos', eventos_router_1.default);
     }
     midlewares() {
         this.app.use((0, cors_1.default)({ origin: 'http://localhost:4200' }));
