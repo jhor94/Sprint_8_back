@@ -1,6 +1,7 @@
 import express, { Application, Request, Response } from "express";
 import cors from "cors";
 import routePersonas from "../routes/personas-router";
+import routerLocalizaciones from "../routes/localizaciones-router"
 //import baseDatos from "../db/connectiondb";// kitar para conectar bd con squelize
 import sequelize from "../db/connectiondb"; // // kitar para conectar bd con squelize
 //import {connection,getConnetion} from "../db/database"
@@ -45,6 +46,7 @@ class Server {
         });*/
         // ira la ruta
         this.app.use('/api/personas', routePersonas)
+        this.app.use('/api/localizaciones', routerLocalizaciones)
     }
 
     midlewares(){
