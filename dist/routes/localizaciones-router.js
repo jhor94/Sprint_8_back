@@ -4,4 +4,8 @@ const express_1 = require("express");
 const localizacion_1 = require("../controllers/localizacion");
 const router = (0, express_1.Router)();
 router.get('/', localizacion_1.getLocalizaciones);
+router.get('/:id', localizacion_1.getLocalizacion);
+router.delete('/:id', localizacion_1.deleteLocalizacion);
+router.post('/', localizacion_1.postLocalizacion);
+router.put('/:id', localizacion_1.updateLocalizacion);
 exports.default = router;
