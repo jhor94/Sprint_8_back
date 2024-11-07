@@ -3,7 +3,9 @@ import cors from "cors";
 import routePersonas from "../routes/personas-router";
 import routerLocalizaciones from "../routes/localizaciones-router"
 import routerEventos from "../routes/eventos-router"
+import routerVentas from "../routes/ventas-router"
 import sequelize from "../db/connectiondb";
+
 
 
 
@@ -52,6 +54,7 @@ class Server {
         this.app.use('/api/personas', routePersonas)
         this.app.use('/api/localizaciones', routerLocalizaciones)
         this.app.use('/api/eventos', routerEventos)
+        this.app.use('/api/ventas', routerVentas)
     }
 
     midlewares(){
