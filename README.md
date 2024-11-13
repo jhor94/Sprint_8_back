@@ -51,7 +51,7 @@ server.ts: El archivo principal donde se configura y ejecuta el servidor Express
 
 bash
 Copiar código
-git clone https://github.com/tu-usuario/tu-repositorio-backend.git
+git clone https://github.com/jhor94/Sprint_8_back.git 
 
 - Instala las dependencias:
 
