@@ -22,6 +22,10 @@ const Eventos = connectiondb_1.default.define('eventos', {
         type: sequelize_1.DataTypes.TEXT,
         allowNull: true
     },
+    color: {
+        type: sequelize_1.DataTypes.STRING,
+        allowNull: true
+    },
     creado_en: {
         type: sequelize_1.DataTypes.DATE,
         defaultValue: sequelize_1.DataTypes.NOW

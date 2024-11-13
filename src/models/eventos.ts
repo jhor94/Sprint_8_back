@@ -18,6 +18,10 @@ const Eventos = sequelize.define('eventos',{
         type: DataTypes.TEXT,
         allowNull: true
     },
+    color: {
+        type: DataTypes.STRING,
+        allowNull:true
+    },
     creado_en: {
         type: DataTypes.DATE,
         defaultValue: DataTypes.NOW
