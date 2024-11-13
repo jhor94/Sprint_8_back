@@ -9,32 +9,6 @@ Este proyecto backend está construido con Node.js, Express, TypeScript, y Seque
 - dotenv: Para gestionar variables de entorno y proteger las credenciales de acceso a la base de datos.
 - MySQL: Sistema de gestión de bases de datos relacionales utilizado para almacenar la información.
 
-
-## Estructura del proyecto
-
-/project-root
-├── /controllers                    # Lógica de negocio y manejo de solicitudes CRUD
-│   └── eventosController.ts      
-│   └── localizacionController.ts     
-│   └── personasController.ts     
-│   └── ventasController.ts   
-│
-├── /db
-│   └── database.ts              # Conexión e inicialización de la base de datos
-│
-├── /routes
-│   └── eventos-routes.ts          # Rutas para interactuar con los eventos que se enseñaran en calendario en el front-end
-│   └── localizaciones-routes.ts   # Rutas para interactuar con las localizaciones que se enseñaran en un mapa en el front-end
-│   └── personas-routes.ts         # Rutas para interactuar con las ersonas que se enseñaran mediante una tabla en el front-end
-│   └── ventas-routes.ts           # Rutas para interactuar con las ventas que se enseñaran mediante gráficos en el front-end
-│
-│
-├── .env                         # Archivo de variables de entorno (protege las credenciales de DB)
-├── server.ts                       # Configuración general de la aplicación Express
-├── package.json                 # Dependencias y scripts del proyecto
-├── tsconfig.json                # Configuración de TypeScript
-└── README.md                    # Este archivo
-
 ## Descripción de las carpetas y archivos:
 /controllers: Esta carpeta contiene los controladores, que gestionan la lógica de negocio de las solicitudes HTTP. Se maneja las operaciones CRUD para los diferentes datos.
 
