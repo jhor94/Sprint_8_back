@@ -23,8 +23,6 @@ server.ts: El archivo principal donde se configura y ejecuta el servidor Express
 ## Instalación
 - Clona este repositorio:
 
-bash
-Copiar código
 git clone https://github.com/jhor94/Sprint_8_back.git 
 
 - Instala las dependencias:
@@ -35,8 +33,6 @@ npm install
 
 - Crea el archivo .env en el directorio raíz y añade las credenciales de tu base de datos:
 
-makefile
-Copiar código
 DB_HOST=localhost
 DB_PORT=3306
 DB_USER=tu-usuario
@@ -45,16 +41,13 @@ DB_NAME=sprintAngular
 
 - Compila el código TypeScript:
 
-bash
-Copiar código
 npm run tsc
-Ejecuta el servidor:
+
 - Dentro del SQL crea una base de datos llamada sprintAngular e importa la base de datos dentro.
 
 - Inicia el servidor local del back
-bash
-Copiar código
 npm  run servidor
+
 El servidor ahora debería estar en ejecución, escuchando las solicitudes HTTP en el puerto que hayas configurado (por defecto, en el puerto 3000).
 
 ## Funcionalidades
