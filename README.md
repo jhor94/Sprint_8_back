@@ -33,17 +33,17 @@ npm install
 
 - Crea el archivo .env en el directorio raíz y añade las credenciales de tu base de datos:
 
-DB_HOST=localhost
-DB_PORT=3306
-DB_USER=tu-usuario
-DB_PASSWORD=tu-contraseña
-DB_NAME=sprintAngular
+    - DB_HOST=localhost
+    - DB_PORT=3306
+    - DB_USER=tu-usuario (preferiblemente el usuario root para este caso)
+    - DB_PASSWORD=tu-contraseña (si no tienes deja este espacio en blanco)
+    - DB_NAME=sprintAngular
 
 - Compila el código TypeScript:
 
 npm run tsc
 
-- Dentro del SQL crea una base de datos llamada sprintAngular e importa la base de datos dentro.
+- Dentro del SQL crea una base de datos llamada sprintAngular e importa la base de datos sprintAngular.sql dentro.
 
 - Inicia el servidor local del back
 npm  run servidor
