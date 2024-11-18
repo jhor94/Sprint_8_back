@@ -33,11 +33,13 @@ npm install
 
 - Crea el archivo .env en el directorio raíz y añade las credenciales de tu base de datos:
 
-    - DB_HOST=localhost
-    - DB_PORT=3306
-    - DB_USER=tu-usuario (preferiblemente el usuario root para este caso)
-    - DB_PASSWORD=tu-contraseña (si no tienes deja este espacio en blanco)
-    - DB_NAME=sprintAngular
+PORT:'3000'
+
+SQL_PORT=3306
+HOST=localhost
+DATABASE=sprintAngular
+SQL_USER=root
+PASSWORD=
 
 - Compila el código TypeScript:
 
