@@ -33,7 +33,7 @@ npm install
 
 - Crea el archivo .env en el directorio raíz y añade las credenciales de tu base de datos:
 
-PORT:'3000'
+PORT='3000'
 
 SQL_PORT=3306
 HOST=localhost
