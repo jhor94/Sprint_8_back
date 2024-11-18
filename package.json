@@ -11,6 +11,7 @@
   "license": "ISC",
   "description": "Este proyecto backend está construido con Node.js, Express, TypeScript, y Sequelize para gestionar una base de datos SQL. A través de este backend, se gestionan operaciones CRUD (Crear, Leer, Actualizar, Eliminar) para manejar datos de personas, y se conecta con un frontend donde se muestran gráficos, eventos en un calendario, localizaciones en un mapa y una tabla de datos de personas.",
   "dependencies": {
+    "@sequelize/mysql": "^7.0.0-alpha.43",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
@@ -20,6 +21,7 @@
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
-    "@types/express": "^5.0.0"
+    "@types/express": "^5.0.0",
+    "nodemon": "^3.1.7"
   }
 }

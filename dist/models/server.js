@@ -42,16 +42,6 @@ class Server {
                 description: "api working"
             });
         });
-        /* this.app.get('/api/personas', async(req: Request,res:Response)=>{
-             try{
-                 const connection = await getConnetion();
-                 const result = await connection.query("SELECT * FROM persona");
-                 res.json(result);
-                 }catch(error){
-                     console.error(error);
-                     res.status(500).json({message: 'Error en la base de datos'})
-             }
-         });*/
         // ira la ruta
         this.app.use('/api/personas', personas_router_1.default);
         this.app.use('/api/localizaciones', localizaciones_router_1.default);
